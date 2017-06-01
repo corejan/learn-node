@@ -1,8 +1,8 @@
 {
-  "name": "testapp",
+  "name": "learnnode",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "dependencies": {
     "cookie-parser": "^1.4.3",
     "express": "^4.15.3"
@@ -11,6 +11,6 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "jc",
-  "license": "ISC"
+  "author": "corejan",
+  "license": "MIT"
 }
