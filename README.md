@@ -1,2 +1,2 @@
 # learn-node
-Learn nodejs development with express
+Learn nodejs development
