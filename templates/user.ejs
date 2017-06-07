@@ -4,6 +4,7 @@
 		<meta charset="UTF-8">
 		<title></title>
 
+        <link href="../styles/lib/milligram.min.css" rel="stylesheet" />
         <style>
             @keyframes twinkling
             {
@@ -27,10 +28,25 @@
 		<script src="../scripts/user.js"></script>
 	</head>
     <body>
-    <h2><%= title %><span class="twinkle">|</span></h2>
+    <h3><%= title %><span class="twinkle">|</span></h3>
         <div id="mainContainer">
             <p>TODO: show user[id={{id}}]'s data here.</p>
         <div>
         <div id="mdcontent"></div>
+        <dl>
+            <dt><a>menu1</a></dt>
+            <dt><a>menu2</a>
+                <dl>
+                    <dt><a>menu2.1</a></dt>
+                    <dt><a>menu2.2</a>
+                        <dl>
+                            <dt><a>menu2.2.1</a></dt>
+                            <dt><a>menu2.2.2</a></dt>
+                        </dl>
+                    </dt>
+                </dl>
+            </dt>
+            <dt><a>menu3</a></dt>
+        </dl>
 	</body>
 </html>
