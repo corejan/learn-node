@@ -7,9 +7,26 @@
 		<script src="../scripts/lib/jquery.min.js"></script>
 		<script src="../scripts/lib/vue.min.js"></script>
 		<script src="../scripts/user.js"></script>
+
+        <style>
+            @keyframes twinkling
+            {
+                0%{ opacity:0; }
+                25%{ opacity:1; }
+                75%{ opacity:0; }
+                100%{ opacity:0; }
+            }
+
+            .twinkle{
+                animation: twinkling 0.8s infinite ease-in-out;
+                -o-animation: twinkling 0.8s infinite ease-in-out;
+                -webkit-animation: twinkling 0.8s infinite ease-in-out;
+                -moz-animation: twinkling 0.8s infinite ease-in-out;
+            }
+        </style>
 	</head>
     <body>
-        <h2><%= title %></h2>
+    <h2><%= title %><span class="twinkle">|</span></h2>
         <div id="mainContainer">
             <p>TODO: show user[id={{id}}]'s data here.</p>
         <div>
