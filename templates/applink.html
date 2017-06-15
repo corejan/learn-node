@@ -1,0 +1,67 @@
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <title>App Loader</title>
+
+        <script src="base64.min.js" charset="utf-8"></script>
+
+        <script type="text/javascript" charset="utf-8">
+            var iosAppStore = "http://www.example.com/download/index.html";
+            var androidAppStore = "http://www.example.com/download/index.html";
+
+            function getQueryString(url, name) {
+                return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)')
+                    .exec(url) || [null, ''])[1]
+                    .replace(/\+/g, '%20')) || null;
+            }
+
+            function getOS() {
+                var os = {};
+
+                var ua = navigator.userAgent.toUpperCase();
+                if (ua.indexOf("IPHONE")>=0 || ua.indexOf("IPAD")>=0) {
+                    os.ios = 1;
+                } else if (ua.indexOf("ANDROID")>=0) {
+                    os.android = 1;
+                } else if (ua.indexOf("WINDOWS")>=0) {
+                    os.windows = 1;
+                } else {
+                    os.other = 1;
+                }
+
+                return os;
+            }
+
+            function getUrlSchemes() {
+                //将UrlScheme转换为Base64字符串加入到url query中，以便于传递
+                var query = getQueryString(window.location.href, 'q');
+                var url = Base64.decode(query);
+
+                return url;
+            }
+
+            function openApp() {
+                var urlscheme = getUrlSchemes();
+                console.log(urlscheme);
+
+                var frame = document.createElement("iframe");
+                frame.src = urlscheme;
+                frame.style.display = "none"; 
+                document.body.appendChild(frame);
+
+                window.setTimeout(function(){
+                    document.body.removeChild(frame);
+
+                    os = getOS();
+                    if (os.ios){
+                        window.location.href = iosAppStore;
+                    } else if(os.android) {
+                        window.location.href = androidAppStore;
+                    }
+                }, 2000);
+            }
+        </script>
+    </head>
+    <body onload="openApp()">
+    </body>
+</html>
