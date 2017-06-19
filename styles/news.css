@@ -1,0 +1,40 @@
+p {
+	font-size: large;
+}
+
+.container {
+	padding: 10px;
+}
+
+.node {
+	display: -webkit-flex;
+  	display: flex;
+}
+
+.time {
+	width: 100px;
+}
+
+.time p {
+	text-align: right;
+	margin-right: 20px;
+}
+
+.circle {
+	z-index: 100;
+	position: absolute;
+    margin-top: 20px;
+}
+
+.content {
+	-webkit-flex: 1;
+    flex: 1;
+    border-left-width: medium;
+    border-left-style: solid;
+    border-left-color: silver;
+  	padding-bottom: 10px;
+}
+
+.content p {
+	margin-left: 20px;
+}

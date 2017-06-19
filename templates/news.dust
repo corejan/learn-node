@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		
+		<link href="styles/lib/mui.min.css" rel="stylesheet" />
+		<link href="styles/news.css" rel="stylesheet" />
+	</head>
+	<body>
+		<div id="mainContainer" class="container">
+			<div class="node" v-for="item in listsource">
+				<template>
+					<div class="circle">
+						<svg width="120" height="120" version="1.1" xmlns="http://www.w3.org/2000/svg">
+							<circle cx="102" cy="8" r="6" stroke="silver" stroke-width="4" fill="white" />
+						</svg>
+					</div>
+					<div class="time">
+						<p>
+							2017/6/19
+							<br/>
+							12:00
+						</p>
+					</div>
+					<div class="content">
+						<p>
+							在我们讨论宽度的时候，我们应该讲下与它相关的另外一个重点知识：盒模型。当你设置了元素的宽度，实际展现的元素却超出你的设置：这是因为元素的边框和内边距会撑开元素。看下面的例子，两个相同宽度的元素显示的实际宽度却不一样。
+						</p>
+					</div>
+				</template>
+			</div>			
+		</div>
+		<script src="scripts/lib/vue.min.js" type="text/javascript"></script>
+		<script src="scripts/news.js" type="text/javascript"></script>
+	</body>
+</html>

@@ -1,14 +1,17 @@
 var express = require('express');
+var hoffman = require('hoffman');
 var url = require('url');
 var http = require('http');
 var util = require('util');
+var path = require('path');
 //var cookieParser = require('cookie-parser')
 
 var app = express();
 
 /*--------set view engine---------*/
-app.set('views', './templates')
-app.set("view engine", "ejs");  
+app.set('views', path.join(__dirname, 'templates')); // path to your templates
+app.set('view engine', 'dust');
+app.engine('dust', hoffman.__express());
 
 /*---------use middleware----------*/
 //check user data, token...
@@ -27,6 +30,12 @@ app.use('/*.html', function (req, res, next) {
 
 /*---------define routes---------*/
 //request for web pages
+app.get('/', function(req, res) {
+    var path = url.parse(req.url).pathname;
+    //TODO: get real data and render page
+	res.render('news', {});	
+});
+
 app.get('/user/*.html', function(req, res) {
     var path = url.parse(req.url).pathname;
     //TODO: get real data and render page
