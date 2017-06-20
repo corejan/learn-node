@@ -5,13 +5,13 @@
 
 		<title></title>
 
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 		<link rel="stylesheet" href="styles/lib/bulma.min.css" />
 		<link rel="stylesheet" href="styles/index.css" />
 
 		<script src="scripts/lib/jquery.min.js"></script>
 		<script src="scripts/lib/vue.min.js"></script>
-        <script src="scripts/index.js"></script>
+		<script src="scripts/index.js"></script>
 	</head>
 
 	<body>
@@ -29,37 +29,28 @@
 				<div class="container main-wrap">
 					<div class="columns">
 						<div class="column is-three-quarters">
-							<div id="articles" class="box">
+							<div id="articles">
 								<article class="media" v-for="item in datasource">
 									<template>
 										<div class="media-content">
 											<div class="content">
-                                                <p><a>知乎上有哪些在前端开发领域的高质量回答？</a></p>
-                                                <p><strong>暗灭</strong> <small>31m</small>
-                                                <span class="badge">CSS</span>
-                                                <span class="badge">前端开发</span>
-                                                </p>
-                                                <div class="content-inner">
-                                                    <div class="content-text">
-                                                        <p>
-                                                          自问自答。自己在知乎上收集了不少前端开发领域的问答，收获不小，但结构比较凌乱，整理了下，头绪也清楚了些。希望对大家也有用处，同时感谢这些问答的作者。
-===
-非常感谢 @何沁童鞋的重新排版。
-===
-更新于2015年3月8日。
-另外，整理了一下个人的chrome收藏夹，对前端有兴趣的童鞋可以关注，SunLn的前端收藏夹
-===
-
-作者：SunLn
-链接：https://www.zhihu.com/question/20246142/answer/14470387
-来源：知乎
-著作权归作者所有，转载请联系作者获得授权。
-</p>
-                                                    </div>
-                                                    <div class="content-image">
-                                                        <img src="http://localhost:4000/images/placeholders/128x128.png">
-                                                    </div>
-                                                </div>
+												<p>
+													<a>知乎上有哪些在前端开发领域的高质量回答？</a>
+												</p>
+												<p><strong>暗灭</strong> <small>31m</small>
+													<span class="badge">CSS</span>
+													<span class="badge">前端开发</span>
+												</p>
+												<div class="content-inner">
+													<div class="content-text">
+														<p>
+															自问自答。自己在知乎上收集了不少前端开发领域的问答，收获不小，但结构比较凌乱，整理了下，头绪也清楚了些。希望对大家也有用处，同时感谢这些问答的作者。 === 非常感谢 @何沁童鞋的重新排版。 === 更新于2015年3月8日。 另外，整理了一下个人的chrome收藏夹，对前端有兴趣的童鞋可以关注，SunLn的前端收藏夹 === 作者：SunLn 链接：https://www.zhihu.com/question/20246142/answer/14470387 来源：知乎 著作权归作者所有，转载请联系作者获得授权。
+														</p>
+													</div>
+													<div class="content-image">
+														<img src="http://localhost:4000/images/placeholders/128x128.png">
+													</div>
+												</div>
 											</div>
 											<nav class="level is-mobile">
 												<div class="level-left">
@@ -80,40 +71,53 @@
 							</div>
 						</div>
 						<div class="column">
-							<div class="box">
-								<p><span class="title is-5">分类导航</span></p>
-								<hr>
-								<div class="columns">
-									<div class="column is-3 is-marginless">
-										<div class="image">
-											<img src="https://placehold.it/200x200">
-										</div>
-									</div>
-									<div class="column is-9">
-										<p><a href="#"><strong>前端开发</strong></a></p>
-									</div>
-								</div>
-								<div class="columns">
-									<div class="column is-3 is-marginless">
-										<div class="image">
-											<img src="https://placehold.it/200x200">
-										</div>
-									</div>
-									<div class="column is-9">
-                                        <p><a href="#"><strong>网页设计</strong></a></p>
-									</div>
-								</div>
-								<div class="columns">
-									<div class="column is-3 is-marginless">
-										<div class="image">
-											<img src="https://placehold.it/200x200">
-										</div>
-									</div>
-									<div class="column is-9">
-										<p><a href="#"><strong>Web 标准</strong></a></p>
-									</div>
-								</div>
-							</div>
+							<aside class="menu">
+								<p class="menu-label">
+									General
+								</p>
+								<ul class="menu-list">
+									<li>
+										<a>Dashboard</a>
+									</li>
+									<li>
+										<a>Customers</a>
+									</li>
+								</ul>
+								<p class="menu-label">
+									Administration
+								</p>
+								<ul class="menu-list">
+									<li>
+										<a>Team Settings</a>
+									</li>
+									<li>
+										<a class="is-active">Manage Your Team</a>
+									</li>
+									<li>
+										<a>Invitations</a>
+									</li>
+									<li>
+										<a>Cloud Storage Environment Settings</a>
+									</li>
+									<li>
+										<a>Authentication</a>
+									</li>
+								</ul>
+								<p class="menu-label">
+									Transactions
+								</p>
+								<ul class="menu-list">
+									<li>
+										<a>Payments</a>
+									</li>
+									<li>
+										<a>Transfers</a>
+									</li>
+									<li>
+										<a>Balance</a>
+									</li>
+								</ul>
+							</aside>
 						</div>
 					</div>
 				</div>
