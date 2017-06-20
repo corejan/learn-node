@@ -51,11 +51,12 @@ body {
 
 .badge {
     margin-right: 2px;
-    padding: 1px;
+    padding: 2px;
     border-radius: 2px;
     border-width: thin;
-    border-style: solid;
-    border-color: blue;
-    color: blue;
+    border-style: none;
+    border-color: hsl(10, 50%, 50%);
+    color: hsl(10, 50%, 50%);
+    background-color: hsl(10, 50%, 90%);
     font-size: 11;
 }
