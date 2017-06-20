@@ -17,7 +17,7 @@
 	<body>
 		<div>
 			<nav class="nav has-shadow">
-				<div class="main-wrap">
+				<div class="container">
 					<div class="nav-left">
 						<a class="nav-item">
 							<img src="http://bulma.io/images/bulma-logo.png" alt="Bulma logo">
@@ -26,7 +26,7 @@
 				</div>
 			</nav>
 			<main role="main">
-				<div class="container main-wrap">
+				<div class="container content-container main-wrap">
 					<div class="columns">
 						<div class="column is-three-quarters">
 							<div id="articles">
