@@ -33,7 +33,7 @@ app.use('/*.html', function (req, res, next) {
 app.get('/', function(req, res) {
     var path = url.parse(req.url).pathname;
     //TODO: get real data and render page
-	res.render('news', {});	
+	res.render('index', {});	
 });
 
 app.get('/user/*.html', function(req, res) {

@@ -1,33 +1,95 @@
 <html>
-    <head>
-        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 
-        <title></title>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 
-        <link rel="stylesheet" href="styles/lib/bulma.min.css" />
-        <link rel="stylesheet" href="styles/index.css" />
-    </head>
-    <body>
-        <div>
-            <nav class="nav has-shadow">
-                <div class="nav-left">
-                    <a class="nav-item">
-                      <img src="http://bulma.io/images/bulma-logo.png" alt="Bulma logo">
-                    </a>
-                </div>
-            </nav>
-            <main role="main">
-                <div class="container">
-                    <div class="columns">
-                        <div class="column is-three-quarters">
-                            <p>ad</p>
-                        </div>
-                        <div class="column">
-                            <p>asd</p>
-                        </div>
-                    </div>
-                </div>
-            </main>
-        </div>
-    </body>
+		<title></title>
+
+		<link rel="stylesheet" href="styles/lib/bulma.min.css" />
+		<link rel="stylesheet" href="styles/index.css" />
+
+		<script src="scripts/lib/jquery.min.js"></script>
+		<script src="scripts/lib/vue.min.js"></script>
+        <script src="scripts/index.js"></script>
+	</head>
+
+	<body>
+		<div>
+			<nav class="nav has-shadow">
+				<div class="main-wrap">
+					<div class="nav-left">
+						<a class="nav-item">
+							<img src="http://bulma.io/images/bulma-logo.png" alt="Bulma logo">
+						</a>
+					</div>
+				</div>
+			</nav>
+			<main role="main">
+				<div class="container main-wrap">
+					<div class="columns">
+						<div class="column is-three-quarters">
+							<div id="articles" class="box">
+								<article class="media" v-for="item in datasource">
+									<template>
+										<div class="media-content">
+											<div class="content">
+                                                <strong>John Smith</strong> <small>@johnsmith</small> <small>31m</small>
+                                                <div class="content-inner">
+                                                    <div class="content-text">
+                                                        <p>
+                                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.
+                                                        </p>
+                                                    </div>
+                                                    <div class="content-image">
+                                                        <img src="http://localhost:4000/images/placeholders/128x128.png">
+                                                    </div>
+                                                </div>
+											</div>
+											<nav class="level is-mobile">
+												<div class="level-left">
+													<a class="level-item">
+														<span class="icon is-small"><i class="fa fa-reply"></i></span>
+													</a>
+													<a class="level-item">
+														<span class="icon is-small"><i class="fa fa-retweet"></i></span>
+													</a>
+													<a class="level-item">
+														<span class="icon is-small"><i class="fa fa-heart"></i></span>
+													</a>
+												</div>
+											</nav>
+										</div>
+									</template>
+								</article>
+							</div>
+						</div>
+						<div class="column">
+							<div class="box">
+								<p><span class="title is-5">Who to follow</span></p>
+								<hr>
+								<div class="columns">
+									<div class="column is-3 is-marginless">
+										<div class="image">
+											<img src="https://placehold.it/200x200">
+										</div>
+									</div>
+									<div class="column is-9">
+										<p>
+											<a href="#">
+												<strong>John Smith</strong>
+											</a>
+											<a href="#">
+												<i class="fa fa-times"></i>
+											</a>
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</main>
+		</div>
+	</body>
+
 </html>
