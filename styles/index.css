@@ -1,5 +1,11 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+}
+
 body {
     background-color: #f7f8fa;
+    font-size: 13px;
 }
 
 .nav {
@@ -13,6 +19,11 @@ body {
 
 .main-wrap {
     width: 960px;
+}
+
+.content > p > small {
+    color: gray;
+    margin-right: 5px;
 }
 
 .content-inner {
@@ -33,4 +44,15 @@ body {
 .content-image img {
     width: 100%;
     height: 70px;
+}
+
+.badge {
+    margin-right: 2px;
+    padding: 1px;
+    border-radius: 2px;
+    border-width: thin;
+    border-style: solid;
+    border-color: blue;
+    color: blue;
+    font-size: 11;
 }
