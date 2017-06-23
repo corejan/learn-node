@@ -1,0 +1,123 @@
+[
+    {
+        module: '*',
+        resources: [
+            {
+                type: 'tree',
+                permissions: [
+                    { action: 'query', atLeast: 'guest' },
+                    { action: 'create,modify,delete', atLeast: 'admin' }
+                ]
+            },
+            {
+                type: 'attachment',
+                permissions: [
+                    { action: 'query,download', atLeast: 'guest' },
+                    { action: 'upload,delete', atLeast: 'admin' }
+                ]
+            },
+        ]
+    },
+    {
+        module: 'user',
+        resources: [{
+            type: 'userInfo',
+            permissions: [
+                { action: 'query', atLeast: 'guest' },
+                { action: 'changePassword', atLeast: 'owner' },
+                { action: 'create,modify,delete', atLeast: 'admin' }
+            ]
+        }]
+    },
+    {
+        module: 'area',
+        resources: [{
+            type: 'area',
+            permissions: [
+                { action: 'query', atLeast: 'guest' },
+                { action: 'create,modify,delete', atLeast: 'admin' }
+            ]
+        }]
+    },
+    {
+        module: 'problem',
+        resources: [{
+            type: 'problem',
+            permissions: [
+                { action: 'query,create', atLeast: 'guest' },
+                { action: 'modify,delete', atLeast: 'owner' },
+                { action: 'approve', atLeast: 'admin' }
+            ]
+        }]
+    },
+    {
+        module: 'standard',
+        resources: [{
+            type: 'standard',
+            permissions: [
+                { action: 'query', atLeast: 'guest' },
+                { action: 'create,modify,delete', atLeast: 'admin' }
+            ]
+        }]
+    },
+    {
+        module: 'plan',
+        resources: [{
+            type: 'plan',
+            permissions: [
+                { action: 'query', atLeast: 'guest' },
+                { action: 'create,modify,delete', atLeast: 'admin' }
+            ]
+        }]
+    },
+    {
+        module: 'propagate',
+        resources: [{
+            type: 'propagate',
+            permissions: [
+                { action: 'query', atLeast: 'guest' },
+                { action: 'create,modify,delete', atLeast: 'admin' }
+            ]
+        }]
+    },
+    {
+        module: 'voteEvent',
+        resources: [{
+            type: 'voteEvent',
+            permissions: [
+                { action: 'query', atLeast: 'guest' },
+                { action: 'create,modify,delete', atLeast: 'admin' }
+            ]
+        }]
+    },
+    {
+        module: 'tool',
+        resources: [
+            {
+                type: 'tool',
+                permissions: [
+                    { action: 'query', atLeast: 'guest' },
+                    { action: 'create,modify,delete', atLeast: 'admin' }
+                ]
+            },
+            {
+                type: 'apply',
+                permissions: [
+                    { action: 'query,create', atLeast: 'guest' },
+                    { action: 'modify,delete', atLeast: 'owner' },
+                    { action: 'approve', atLeast: 'admin' }
+                ]
+            },
+        ]
+    },
+    {
+        module: 'unusedMaterial',
+        resources: [{
+            type: 'unusedMaterial',
+            permissions: [
+                { action: 'query', atLeast: 'guest' },
+                { action: 'create,modify,delete', atLeast: 'admin' }
+            ]
+        }]
+    },
+]
